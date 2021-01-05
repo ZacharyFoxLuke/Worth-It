@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Stylesheets/styles_NEW.css">
+    <link rel="stylesheet" type="text/css" href="Stylesheets/responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    
+    <title>Worth It?</title>
+</head>
+
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Worth It?</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="headerText">Worth It?</h1>
+            <div id="subHeaderItems">
+                <span id="about">About</span>
+                <div id="about-message" class="modal-frame">
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <h2>What is this thing?</h2>
+                            <hr>
+                            <button class="close">&#10005;</button>
+                            <p>
+                                Using a credit card to pay for things is both convenient and rewarding, but it
+                                becomes less so when there's a transaction or "convenience" fee at the checkout.
+                            </p>
+                            <p>
+                                <i>"Worth It?"</i> is a simple calculation tool that shows how much extra you'll
+                                earn or lose when there's a transaction fee involved. Simply enter in the numbers, 
+                                and it'll tell you if your credit card's rewards outweigh the fee, or vice versa.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-overlay"></div>
+                </div>
+                &nbsp; 
+                <span id="contact">Contact</span>
+                <div id="contact-message" class="modal-frame">
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <h2>Let's Connect!</h2>
+                            <hr>
+                            <button class="close">&#10005;</button>
+                            <p style="text-align: center;">
+                                <i>"Worth It?"</i> was created by Zachary Fox Luke, a developer 
+                                 based in Charlotte, NC.
+                            </p>
+                            <p style="text-align: center;">
+                                 Click one of the links below to connect with him!
+                            </p>
+                            <p style="text-align: center;">
+                            <a target="_blank" href="https://www.linkedin.com/in/zachary-fox-luke/">LinkedIn</a>&nbsp;&nbsp;
+                            <a target="_blank" href="https://www.github.com/zacharyfoxluke/">GitHub</a>&nbsp;&nbsp;
+                            <!-- <a target="_blank" href="#">Email</a> -->
+                            </p>
+                            <p style="font-size: 9px; text-align: center;"><i>"Worth It?" © Zachary Fox Luke, 2020</i></p>
+                        </div>
+                    </div>
+                    <div class="modal-overlay"></div>
+                </div>
+            </div>
+        </header>
+        <br>
+        <main>
+            <div id="inputFields">
+                <div class="inputSection">
+                    <h3>How much is the purchase?</h3>
+                    <input class="textField" id="purchaseAmountInput" type="number" placeholder="$0.00">
+                </div>
+                <div class="inputSection">
+                    <div>
+                        <h3>What rewards will you earn?
+                            <svg id="moreInfo1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12" y2="8"></line>
+                            </svg>
+                            <div id="rewards-info-message" class="modal-frame">
+                                <div class="modal-body">
+                                    <div class="modal-inner">
+                                        <h2>Credit Card Rewards 🎁</h2>
+                                        <hr>
+                                        <button class="close">&#10005;</button>
+                                        <p>
+                                             Every credit card is unique, and they each have different
+                                             rewards systems, such as cashback, points, and travel miles.
+                                             <br>
+                                             <br>
+                                             Enter the number of points/miles/cashback 
+                                             earned per dollar spent <br><i>(e.g. - 1, 1.5, or 2.252)</i>.
+                                             <br>
+                                             <br>
+                                             <span style="color: red">Note: Special characters ($, %, /, etc.) 
+                                                will not work in this form.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="modal-overlay"></div>
+                            </div>
+                        </h3>
+                    </div>
+                    <input class="textField" id="rewardsRateInput" type="number" placeholder="e.g. 1.5">
+                </div>
+                <div>
+                    <h3>What is the transaction fee? 
+                        <svg id="moreInfo2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-info">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                        </svg>
+                        <div id="transactionFee-info-message" class="modal-frame">
+                            <div class="modal-body">
+                                <div class="modal-inner">
+                                    <h2>The Transaction Fee 🧮</h2>
+                                    <hr>
+                                    <button class="close">&#10005;</button>
+                                    <p>
+                                        Enter the transaction fee amount here. This field will work with both whole dollar 
+                                        amounts and percentages.
+                                        <br>
+                                        <br>
+                                        <span style="color: red">Note: Special characters ($, %, /, etc.)
+                                            will not work in this form.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-overlay"></div>
+                        </div>
+                    </h3>
+                </div>
+                <div id="fixedFeeSection">
+                    <p><input class="textField" id="fixedFeeInput" type="number" placeholder="0.0% - or - $0.00"></p>
+                </div>
+            </div>
+
+            <!-- Profit -->
+            <div id="profit-message" class="modal-frame">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <h2>You Will Earn Money! 💰</h2>
+                        <hr>
+                        <button class="close">&#10005;</button>
+                        <p>Based on the information provided, you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and
+                            spend $<span class="dollarsFee">[[dollars]]</span> on the transaction fee.
+                            <br>
+                            <br>
+                            Therefore, you will profit $<span class="dollarsNet">[[dollars]]</span> if you pay with
+                            a credit card!
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-overlay"></div>
+            </div>
+
+            <!-- Loss -->
+            <div id="loss-message" class="modal-frame">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <h2>You Will Lose Money 💸</h2>
+                        <hr>
+                        <button class="close">&#10005;</button>
+                        <p>Based on the information provided, you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
+                            $<span class="dollarsFee">[[dollars]]</span> on the transaction fee.
+                            <br>
+                            <br>
+                            Therefore, your net will be $<span class="dollarsNet">[[dollars]]</span> if you pay with a credit card. Consider using cash
+                            instead.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-overlay"></div>
+            </div>
+
+            <!-- Break Even -->
+            <div id="break-even-message" class="modal-frame">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <h2>You'll Break Even 🤷</h2>
+                        <hr>
+                        <button class="close">&#10005;</button>
+                        <p>Based on the information provided, you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
+                            $<span class="dollarsFee">[[dollars]]</span> on the transaction fee.
+                            <br>
+                            <br>
+                            You won't make a profit, but you won't lose any money either.
+                            Use a credit card at your own discretion.
+                        </p>
+                    </div>
+                </div> 
+                <div class="modal-overlay"></div>
+            </div>
+
+            <!-- Error -->
+            <div id="error-message" class="modal-frame">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <h2 style="color: red;">❌ &nbsp; ERROR &nbsp; ❌</h2>
+                        <hr>
+                        <button class="close">&#10005;</button>
+                        <p style="text-align: center;">
+                            Please fill out all fields.
+                            <br>
+                            <br>
+                            If you have entered any special characters, please remove them.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-overlay"></div>
+            </div>
+            <div>
+                <button id="submitButton">Submit</button>
+            </div>
+
+
+        </main>
+        <br>
+        <a href="https://github.com/ZacharyFoxLuke" target="_blank">
+            <p id="copyright" style="font-size: 9px; text-align: center; color: #fff;"><i>"Worth It?" © Zachary Fox Luke, 2020</i></p>
+        </a>
+    <script defer src="JavaScript/jQuery.js"></script>
+    <script defer src="JavaScript/scripts_NEW.js"></script>
+    </body>
+
+</html>
