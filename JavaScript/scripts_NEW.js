@@ -10,6 +10,7 @@ $modal_BreakEven = $('#break-even-message')
 $modal_Error = $('#error-message')
 $modal_About = $('#about-message')
 $modal_Contact = $('#contact-message')
+$inputFields = $('#inputFields input')
 $dollarsProfit = $('.dollarsProfit')
 $dollarsFee = $('.dollarsFee')
 $dollarsNet = $('.dollarsNet')
@@ -52,7 +53,12 @@ $('#contact').click(function () {
     $modal_Contact.removeClass('leave')
 })
 
-
+for (let i = 0; i < $inputFields; i++) {
+    if ($inputFields.value) {
+        //when all fields have a value
+        //make the submit button animate
+    }
+}
 
 $('#submitButton').click(function () {
     const purchaseAmount = document.getElementById('purchaseAmountInput').value
