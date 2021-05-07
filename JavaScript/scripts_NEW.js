@@ -10,8 +10,6 @@ $modal_BreakEven = $('#break-even-message')
 $modal_Error = $('#error-message')
 $modal_About = $('#about-message')
 $modal_Contact = $('#contact-message')
-$allInputFields = $('#inputFields input')
-$oneInputField = $('input')
 $submitButton = $('#submitButton')
 $dollarsProfit = $('.dollarsProfit')
 $dollarsFee = $('.dollarsFee')
@@ -54,12 +52,6 @@ $('#contact').click(function () {
     $modal_Contact.toggleClass('active')
     $modal_Contact.removeClass('leave')
 })
-
-for (let i = 0; i < $allInputFields; i++) {
-    if ($allInputFields[i].value) {
-        $submitButton.toggleClass('animate__animated', 'animate__tada')
-    }
-}
 
 $submitButton.click(function () {
     const purchaseAmount = document.getElementById('purchaseAmountInput').value
