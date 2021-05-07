@@ -16,9 +16,9 @@
 
 <body>
     <header>
-        <h1 id="headerText" class="animate__animated animate__tada">Worth It?</h1>
+        <h1 id="headerText" class="animate__animated animate__jackInTheBox">Worth It?</h1>
         <div id="subHeaderItems">
-            <span id="about">About</span>
+            <span id="about" class="animate__animated animate__fadeIn animate__delay-1s">About</span>
             <div id="about-message" class="modal-frame">
                 <div class="modal-body">
                     <div class="modal-inner">
@@ -39,7 +39,7 @@
                 <div class="modal-overlay"></div>
             </div>
             &nbsp; 
-            <span id="contact">Contact</span>
+            <span id="contact" class="animate__animated animate__fadeIn animate__delay-1s">Contact</span>
             <div id="contact-message" class="modal-frame">
                 <div class="modal-body">
                     <div class="modal-inner">
@@ -68,13 +68,15 @@
     <main>
         <div id="inputFields">
             <div class="inputSection">
-                <h3>How much is the purchase?</h3>
-                <input class="textField" id="purchaseAmountInput" type="number" placeholder="$0.00">
+                <h3 class="animate__animated animate__fadeIn animate__delay-1s">How much is the purchase?</h3>
+                <input class="textField animate__animated animate__flipInX animate__delay-1s" id="purchaseAmountInput"
+                    type="number" placeholder="$0.00">
             </div>
             <div class="inputSection">
                 <div>
-                    <h3>What rewards will you earn?
-                        <svg id="moreInfo1"
+                    <h3><span class="animate__animated animate__flipInX animate__delay-1s">What rewards will you
+                            earn?</span>
+                        <svg id="moreInfo1" class="animate__animated animate__fadeInRight animate__delay-1s"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
@@ -89,16 +91,16 @@
                                     <hr>
                                     <button class="close">&#10005;</button>
                                     <p>
-                                            Every credit card is unique, and they each have different
-                                            rewards systems, such as cashback, points, and travel miles.
-                                            <br>
-                                            <br>
-                                            Enter the number of points/miles/cashback 
-                                            earned per dollar spent <br><i>(e.g. - 1, 1.5, or 2.252)</i>.
-                                            <br>
-                                            <br>
-                                            <span style="color: red">Note: Special characters ($, %, /, etc.) 
-                                            will not work in this form.</span>
+                                        Every credit card is unique, and they each have different
+                                        rewards systems, such as cashback, points, and travel miles.
+                                        <br>
+                                        <br>
+                                        Enter the number of points/miles/cashback 
+                                        earned per dollar spent <br><i>(e.g. - 1, 1.5, or 2.252)</i>.
+                                        <br>
+                                        <br>
+                                        <span style="color: red">Note: Special characters ($, %, /, etc.) 
+                                        will not work in this form.</span>
                                     </p>
                                 </div>
                             </div>
@@ -106,11 +108,14 @@
                         </div>
                     </h3>
                 </div>
-                <input class="textField" id="rewardsRateInput" type="number" placeholder="$1.50 or 1.5%">
+                <input class="textField animate__animated animate__flipInX animate__delay-1s" id="rewardsRateInput"
+                    type="number" placeholder="$1.50 or 1.5%">
             </div>
             <div>
-                <h3>What is the transaction fee? 
-                    <svg id="moreInfo2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                <h3><span class="animate__animated animate__fadeIn animate__delay-1s">What is the transaction
+                        fee?</span>
+                    <svg id="moreInfo2" class="animate__animated animate__fadeInRight animate__delay-1s"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-info">
                         <circle cx="12" cy="12" r="10"></circle>
@@ -137,7 +142,8 @@
                 </h3>
             </div>
             <div id="variFeeSection">
-                <p><input class="textField" id="variFeeInput" type="number" placeholder="1%"></p>
+                <p><input class="textField animate__animated animate__flipInX animate__delay-1s" id="variFeeInput"
+                        type="number" placeholder="1%"></p>
             </div>
         </div>
 
@@ -148,7 +154,7 @@
                     <h2>You Will Earn Money! 💰</h2>
                     <hr>
                     <button class="close">&#10005;</button>
-                    <p>Based on the information provided,<br /> you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
+                    <p>Based on the information provided, you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
                         $<span class="dollarsFee">[[dollars]]</span> on the transaction fee.
                         <br>
                         <br>
@@ -167,12 +173,14 @@
                     <h2>You Will Lose Money 💸</h2>
                     <hr>
                     <button class="close">&#10005;</button>
-                    <p>Based on the information provided,<br /> you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
+                    <p>Based on the information provided, you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
                         $<span class="dollarsFee">[[dollars]]</span> on the transaction fee.
                         <br>
                         <br>
                         Therefore, your net will be <span class="netLoss">$<span class="dollarsNet">[[dollars]]</span></span> if you pay with a credit card. 
-                        Consider using cash instead.
+                        <br>
+                        <br>
+                        Consider paying with cash instead.
                     </p>
                 </div>
             </div>
@@ -186,7 +194,7 @@
                     <h2>You'll Break Even 🤷</h2>
                     <hr>
                     <button class="close">&#10005;</button>
-                    <p>Based on the information provided,<br /> you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
+                    <p>Based on the information provided, you will earn $<span class="dollarsProfit">[[dollars]]</span> in rewards and spend
                         $<span class="dollarsFee">[[dollars]]</span> on the transaction fee.
                         <br>
                         <br>
@@ -208,7 +216,7 @@
                         Please fill out all fields.
                         <br>
                         <br>
-                        If you have entered any special characters, please remove them.
+                        If you have entered any special characters or letters, please remove them.
                     </p>
                 </div>
             </div>
@@ -216,20 +224,18 @@
         </div>
 
 
-
-
-
         
         <div>
-            <button id="submitButton" class="animate__animation animate__wobble">Submit</button>
+            <button id="submitButton" class="animate__animated animate__flipInX animate__delay-1s">Submit</button>
         </div>
 
 
     </main>
     <br>
-    <a href="https://github.com/ZacharyFoxLuke" target="_blank">
+    <a href="https://github.com/ZacharyFoxLuke" target="_blank" >
         <p id="copyright" style="font-size: 9px; text-align: center; color: #fff;">
-            <i>"Worth It?" &copy; Zachary Fox Luke, 2020-<span id="currentYear"></span></i>
+            <i class="animate__animated animate__flipInX animate__delay-1s">"Worth It?" &copy; Zachary Fox Luke,
+                2020-<span id="currentYear"></span></i>
         </p>
     </a>
 

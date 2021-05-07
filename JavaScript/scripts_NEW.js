@@ -2,15 +2,17 @@
 // ---------------- The Brains of the Operation ---------------- //
 // ------------------------------------------------------------- //
 $modal = $('.modal-frame')
-$modal_Rewards_Info = $('#rewards-info-message')
-$modal_Transaction_Fee = $('#transactionFee-info-message')
+$modal_Rewards_Info = $('#inputFields #rewards-info-message')
+$modal_Transaction_Fee = $('#inputFields #transactionFee-info-message')
 $modal_Profit = $('#profit-message')
 $modal_Loss = $('#loss-message')
 $modal_BreakEven = $('#break-even-message')
 $modal_Error = $('#error-message')
 $modal_About = $('#about-message')
 $modal_Contact = $('#contact-message')
-$inputFields = $('#inputFields input')
+$allInputFields = $('#inputFields input')
+$oneInputField = $('input')
+$submitButton = $('#submitButton')
 $dollarsProfit = $('.dollarsProfit')
 $dollarsFee = $('.dollarsFee')
 $dollarsNet = $('.dollarsNet')
@@ -53,14 +55,13 @@ $('#contact').click(function () {
     $modal_Contact.removeClass('leave')
 })
 
-for (let i = 0; i < $inputFields; i++) {
-    if ($inputFields.value) {
-        //when all fields have a value
-        //make the submit button animate
+for (let i = 0; i < $allInputFields; i++) {
+    if ($allInputFields[i].value) {
+        $submitButton.toggleClass('animate__animated', 'animate__tada')
     }
 }
 
-$('#submitButton').click(function () {
+$submitButton.click(function () {
     const purchaseAmount = document.getElementById('purchaseAmountInput').value
     const rewardsRate = document.getElementById('rewardsRateInput').value / 100
     const transactionFeeInput = document.getElementById('variFeeInput').value / 100
