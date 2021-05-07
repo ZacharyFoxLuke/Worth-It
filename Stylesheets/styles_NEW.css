@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    background-color: #69ac69;
+    background-color: #419c41;
     color: #fff;
 }
 
@@ -26,8 +26,31 @@ a:hover {
 }
 
 #headerText {
-    font-size: 48px;
+    font-size: 60px;
     margin: .5em;
+}
+
+#headerText:hover {
+    cursor: default;
+    --animate-duration: 1.2s;
+    --animate-delay: 0.9s;
+}
+
+.animate__animated.animate__tada {
+    --animate-duration: 1.2s;
+    --animate-delay: 0.9s;
+}
+
+.netGain,
+.netLoss {
+    font-weight: bold;
+}
+
+.netGain {
+    color: #019f20;
+}
+.netLoss {
+    color: #ff0000;
 }
 
 #subHeaderItems {
@@ -45,18 +68,18 @@ a:hover {
 
 #about:hover,
 #contact:hover {
-    color: #e1c10c;
-    font-weight: bold;
+    color: #2cf1ff;
+    font-weight: 900;
 }
 
 #submitButton {
     margin-top: 37px;
     width: 170px;
     padding: 10px 20px;
-    background-color: #4e95ff;
-    border-radius: 5px;
-    color: #FFF;
-    border: 3px solid #1b63ff;
+    background-color: #f3ff4e;
+    border-radius: 15px;
+    color: #000;
+    border: 3px solid #ffca1b;
     cursor: pointer;
 }
 
