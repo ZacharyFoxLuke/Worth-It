@@ -60,7 +60,7 @@ $submitButton.click(function () {
     const transactionFeeNet = purchaseAmount * transactionFeeInput
     const earnedRewards = purchaseAmount * rewardsRate
     
-    if (purchaseAmount == '' || rewardsRate == '' || transactionFeeInput == '') {
+    if (purchaseAmount == '' || rewardsRate == '' || transactionFeeInput === '') {
         $modal_Error.toggleClass('active')
         $modal_Error.removeClass('leave')
 
