@@ -60,24 +60,24 @@ $submitButton.click(function () {
     const transactionFeeNet = purchaseAmount * transactionFeeInput
     const earnedRewards = purchaseAmount * rewardsRate
     
-    if (purchaseAmount == '' || rewardsRate == '' || transactionFeeInput === '') {
+    if (purchaseAmount === '' || rewardsRate === '' || transactionFeeInput === '') {
         $modal_Error.toggleClass('active')
         $modal_Error.removeClass('leave')
 
-    } else if (earnedRewards == transactionFeeNet) {
+    } else if (rewardsRate === transactionFeeInput && rewardsRate !== '' && transactionFeeInput !== '' && purchaseAmount !== '') {
         $modal_BreakEven.toggleClass('active')
         $modal_BreakEven.removeClass('leave')
         $dollarsProfit.html(rewardsRate * purchaseAmount)
         $dollarsFee.html(transactionFeeNet)
 
-    } else if (earnedRewards < transactionFeeNet) {
+    } else if (rewardsRate < transactionFeeInput && rewardsRate !== '' && transactionFeeInput !== '' && purchaseAmount !== '') {
         $modal_Loss.toggleClass('active')
         $modal_Loss.removeClass('leave')
         $dollarsProfit.html(rewardsRate * purchaseAmount)
         $dollarsFee.html(transactionFeeNet)
         $dollarsNet.html(earnedRewards - transactionFeeNet)
 
-    } else if (earnedRewards > transactionFeeNet) {
+    } else if (rewardsRate > transactionFeeInput && rewardsRate !== '' && transactionFeeInput !== '' && purchaseAmount !== '') {
         $modal_Profit.toggleClass('active')
         $modal_Profit.removeClass('leave')
         $dollarsProfit.html(rewardsRate * purchaseAmount)
